@@ -49,8 +49,16 @@
             $($pg1_p2).appendTo("#playground1");
 
             //playground 2 code
-
+            var $pg2_div1 = $("<div>").text("Here is some awesome div text").addClass("awesome_class");
+            var $pg2_div2 = $("<div>").text("Here is MORE awesome div text.").addClass("awesome_class").attr("id","my_awesome_div2");
+            var $pg2_div3 = $("<div>").text("Here is").addClass("awesome_class").attr("id","my_awesome_div3").attr("data-coolness","high");
+            var $strongText = $("<strong>").text(" EVEN MORE ");
+            $pg2_div3 = $pg2_div3.append($strongText).append("awesome div text");
+            $("div#playground2").append($pg2_div1);
+            $("div#playground2").append($pg2_div2);
+            $("div#playground2").append($pg2_div3);
             //playground 3 code
+
         });
     </script>
 </head>
