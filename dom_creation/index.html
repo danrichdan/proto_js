@@ -58,7 +58,20 @@
             $("div#playground2").append($pg2_div2);
             $("div#playground2").append($pg2_div3);
             //playground 3 code
-
+            var $ul = $("<ul>").addClass("neato");
+            for (var i =1; i <= 3; i++) {
+                var $li = $("<li>").text("Link " + i );
+                $ul.append($li);
+            }
+            var $img = $("<img>").attr("src","http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg");
+            var $figure = $("<figure>").addClass("awesome_picture");
+            var $figcaption = $("<figcaption>").text("That's right, ");
+            var $span = $("<span>").text("you are").addClass("bold_text");
+            $span.appendTo($figcaption);
+            $img.appendTo($figure);
+            $figcaption.appendTo($figure);
+            $("div#playground3").append($ul);
+            $("div#playground3").append($figure);
         });
     </script>
 </head>
