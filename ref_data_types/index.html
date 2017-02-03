@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reference Data Types</title>
+    <script>
+        //Feature Set 1.0
+        var student_array = ["Wade","Junie","Kevin","Yrenia","Jeff"];
+        console.log("Here is the 3rd student in the array : ",student_array[2]);
+        //Feature Set 1.1
+        console.log("Here is the entire array : ", student_array);
+        console.log("Here is the length of the array : ", student_array.length )
+        student_array.push("Taylor", "Weikuan");
+        console.log("Here is the new length of the array : ", student_array.length);
+        console.log("Here is the new student array : ", student_array);
+
+        //Feature Set 2.0
+        var student = {};
+        student.firstName = "Dan";
+        student.lastName = "Riches";
+        student.age = 36;
+        student.school = "Learning Fuze";
+        student.questionList = [];
+        student.hasQuestion = false;
+
+        //Feature Set 2.1
+        student.greeting = function(){
+            return "Hello, my name is " + this.firstName + ".";
+        }
+        student.aboutMe = function(){
+            return "My full name is " + this.firstName + " " + this.lastName + ", " + "I am " + this.age +
+            " years old and I am a student at " + this.school + ".";
+        }
+        student.askQuestion = function(question){
+            this.questionList.push(question);
+            this.hasQuestion = true;
+            return "A question has been added to your list."
+        }
+        student.answerQuestion = function(){
+            if(this.hasQuestion) {
+                if (this.questionList.length-1 === 0) {
+                    this.hasQuestion = false;
+                }
+                return this.questionList.pop();
+            } else {
+                return "You have no pending questions."
+            }
+        }
+        //Feature Set 2.2
+        console.log("Greeting function : ", student.greeting());
+        console.log("About Me function : ", student.aboutMe());
+        console.log("Answer Question function : ", student.answerQuestion());
+        console.log("Ask Question function: ", student.askQuestion("What is the curriculum like?"));
+        console.log("Ask Question function: ", student.askQuestion("What is an array?"));
+        console.log("Ask Question function: ", student.askQuestion("What is an object?"));
+        console.log("Here is the question list: ", student.questionList);
+        console.log("Answer Question function : ", student.answerQuestion());
+        console.log("Here is the question list: ", student.questionList);
+        console.log("Answer Question function : ", student.answerQuestion());
+        console.log("Here is the question list: ", student.questionList);
+        console.log("Answer Question function : ", student.answerQuestion());
+        console.log("Here is the question list: ", student.questionList);
+        console.log("Answer Question function : ", student.answerQuestion());
+
+        //Console.log exercise
+        console.log("Here is my student object " + student);
+        console.log("Here is my student object ", student);
+    </script>
+</head>
+<body>
+    <h1>Reference Data Types</h1>
+    <h2>Please, open your console.</h2>
+</body>
+</html>
