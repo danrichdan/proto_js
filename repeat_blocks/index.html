@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repeat Blocks</title>
+    <script>
+//        //FOR LOOPS
+//        var numbers = [1,2,3,4,5,6,7,8,9,10];
+//        for (var i = 0; i < numbers.length; i++){
+//            console.log("This is the value of i in the numbers array: ", numbers[i]);
+//        };
+//        console.log("*****************END OF FIRST LOOP***************************");
+//        for(var i = numbers.length-1; i >= 0; i--){
+//            console.log("This is the value of i in the numbers array: ", numbers[i]);
+//        };
+//        console.log("*****************END OF SECOND LOOP***************************");
+//        for(var i = 0; i < numbers.length-1; i+=2){
+//            console.log("This is the value of i in the numbers array: ", numbers[i]);
+//        };
+//        console.log("*****************END OF THIRD LOOP***************************");
+//        var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
+//        for(var i = 0; i < mixedArray.length-1; i+=2){
+//            console.log("This is the value of i in the numbers array: ", mixedArray[i]);
+//        };
+//        console.log("*****************END OF FOURTH LOOP***************************");
+//        var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
+//        for(var i = 0; i < mixedArray.length-1; i++){
+//            if(mixedArray[i] % 2 ){
+//            console.log("This is the value of i in the numbers array: ", mixedArray[i]);
+//            }
+//        };
+//        //FOR IN LOOP
+//        var classRoom = {
+//            desk1: 'Stu',
+//            desk2: 'Peggy',
+//            desk3: 'LoneStar',
+//            desk4: 'George',
+//            desk5: 'Sheldon'
+//        }
+//        var txt = " is at ";
+//        for (var index in classRoom) {
+//            console.log(classRoom[index] + txt + index );
+//        }
+        //WHILE LOOP
+        var studentArray = [
+            {
+                name: "Bob",
+                grade: 87
+            },
+            {
+                name: "Fred",
+                grade: 82
+            },
+            {
+                name: "George",
+                grade: 93
+            },
+            {
+                name: "Robert",
+                grade: 85
+            }];
+
+console.log("Here is the studentArray : ",studentArray.length);
+        function findStudent(name){
+            var output = " ";
+            var i = 0;
+            var found = false;
+            while (!found && i < studentArray.length){
+                var student = studentArray[i];
+                if (student.name == name) {
+                    output = "Found " + name + " their grade is " + student.grade + ".";
+                    found = true;
+                }
+                i++;
+            }
+            if(!found) {
+                output = "Student " + name + " not found.";
+            }
+            return output;
+        };
+        console.log("Test 1:", findStudent("George"));
+        console.log("Test 2:", findStudent("Fred"));
+        console.log("Test 3:", findStudent("Hank"));
+        console.log("Test 4:", findStudent("Robert"));
+        console.log("Test 4:", findStudent("Bob"));
+
+    </script>
+</head>
+<body>
+    <h1>Repeat Blocks</h1>
+    <h2>Please open your console.</h2>
+</body>
+</html>
