@@ -38,6 +38,10 @@ $('#list').append($li2);
 //     console.log($("#list button").text());
 // });
 
+$('#list').on("click", 'button', function() {
+    console.log($( this ).text());
+});
+
 $('#list').on("click", 'button[id]', function() {
     console.log($( this ).text());
         window.open('http://www.google.com', '_blank');
